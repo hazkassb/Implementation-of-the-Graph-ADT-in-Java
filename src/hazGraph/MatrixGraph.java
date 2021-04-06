@@ -3,7 +3,7 @@ package hazGraph;
 import java.util.Iterator;
 
 //TODO
-
+//QUITE INEFICIENT, CAN CONSUME A LOT OF SPACE IF THE GRAPH IS SPARSE!
 public class MatrixGraph extends AbstractGraph {
 
 	public MatrixGraph(int numV, boolean directed) {

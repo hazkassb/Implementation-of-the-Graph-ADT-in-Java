@@ -44,8 +44,8 @@ public class DepthFirstSearch {
 		int n = graph.getNumbV();
 		parent = new int[n];
 		visited = new boolean[n];
-		discoveryOrder = new int[n];
-		finishOrder = new int[n];
+		discoveryOrder = new int[n+1];
+		finishOrder = new int[n+1];
 		
 		for(int i = 0; i < n; i++) {
 			parent[i] = -1;
@@ -72,7 +72,7 @@ public class DepthFirstSearch {
 	/** Recursively depth‐first search the graph starting at vertex current.
 	@param current The start vertex
 	*/
-	public void depthFirstSearch(int current) {
+	public int[] depthFirstSearch(int current) {
 		/* Mark the current vertex visited. */
 		visited[current] = true;
 		discoveryOrder[discoverIndex++] = current;
@@ -91,6 +91,8 @@ public class DepthFirstSearch {
 		}
 		/* Mark current finished. */
 		finishOrder[finishIndex++] = current;
+		
+		return finishOrder;
 	}
 
 }

@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * 
  * @author HamzaBoubacar
- *
+ * An edge is a bridge between two vertices
  */
 public class Edge {
 	
@@ -84,10 +84,11 @@ public class Edge {
 	
 	
 	
-	
-	
+	/**
+	 * Provides a string representation of an edge between two vertices.
+	 */
 	@Override
 	public String toString() {
 		return "Edge [source + " + " ==> " + dest + ": weight=" + weight + "]";
-	}	
+	}
 }

@@ -40,7 +40,7 @@ public class BreadthFirstSearchAlgo {
 		// Perform breadth-first search until done
 		while(!theQueue.isEmpty()) {
 			/* Take a vertex, current, out of the queue. (begin visiting) */
-			int current = theQueue.remove();
+			int current = theQueue.poll();
 			
 			/* Examine each vertex adjacent/neighbor to current */
 			Iterator<Edge> iter = graph.edgeIterator(current);

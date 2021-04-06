@@ -27,10 +27,10 @@ public class ListGraph extends AbstractGraph {
 	 */
 	public ListGraph(int numV, boolean directed) {
 		super(numV, directed);
-		edges = new List[numV];
+		this.edges = new List[numV];
 		
 		for(int i = 0; i < numV; i++) {
-			edges[i] = new LinkedList<Edge>();
+			this.edges[i] = new LinkedList<Edge>();
 		}
 	}
 	
@@ -78,11 +78,15 @@ public class ListGraph extends AbstractGraph {
 	 * 	@return true if there is an edge from source to dest, false otherwise.
 	 */
 	public boolean isEdge(int source, int dest) {
-		return edges[source].contains(new Edge(source, dest));
+		Edge e = new Edge(source, dest);	//build the edge source <---> dest
+		return edges[source].contains(e);	//check if the edge exist at index source
 	}
 
 
 	@Override
+	/*
+	 * Returns the number of vertices in this graph
+	 */
 	public int getNumbV() {
 		return super.getNumV();
 	}

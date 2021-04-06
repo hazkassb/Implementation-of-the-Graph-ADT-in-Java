@@ -4,12 +4,13 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+//Most time and space efficient implementation of a graph
 public class MapGraph extends AbstractGraph {
 	// Data Field
 	/** An array of Maps to contain the edges that originate with each index */
 	private Map<Integer, Edge>[] outgoingEdges;
 	
-		
+	
 	// Constructor
 	/** Constructs an empty graph with the specified number of vertices and with the 
 	 * specified directed flag. If directed is true, this is a directed flag.
